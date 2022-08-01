@@ -1,0 +1,87 @@
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+body{
+    font-family:'Times New Roman', Times, serif;
+    background: url(woda.jpg);
+}
+nav{
+    height: 80px;
+    width: 100%;
+    background: skyblue;
+
+}
+label.logo{
+    font-size: 35px;
+    font-weight: bold;
+    color: white;
+    padding: 0 50px;
+    line-height: 80px;
+}
+nav ul{
+    float: right;
+    margin-right: 40px;
+
+}
+nav li{
+    display: inline-block;
+    margin: 0 8px;
+    line-height: 80px;
+}
+nav a{
+    color: white;
+    font-size: 18px;
+    text-transform: uppercase;
+    border: 1px solid transparent;
+    padding: 7px 10px;
+    border-radius: 5px;
+}
+a.active,a:hover{
+    border: 1px solid white;
+    transition: .5s;
+}
+
+.background{
+    width: 200px;
+
+    height: 110vh;
+    
+    
+    
+}
+
+
+.background ul li{
+    position: relative;
+    background-color: skyblue;
+    padding: 20px;
+}
+
+.background ul li:hover{
+    background: white;
+    transform: translateX(50px);
+
+}
+
+.background ul li a{
+    color: black;
+    display: block;
+    text-transform: uppercase;
+    letter-spacing: 0.5em;
+
+}
+.sidenav {
+    height: 100%;
+    width: 200px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: skyblue;
+    
+    padding-top: 20px;
+  }
