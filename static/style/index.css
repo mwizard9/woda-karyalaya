@@ -7,7 +7,7 @@
 
 body{
     font-family:'Times New Roman', Times, serif;
-    background: url(/static/images/woda.jpg);
+    
 }
 nav{
     height: 80px;
@@ -84,4 +84,10 @@ a.active,a:hover{
     background-color: skyblue;
     
     padding-top: 20px;
+  }
+
+  section .image{
+    height: 50%;
+    width: 70%;
+    background: url(/static/images/woda.jpg);
   }

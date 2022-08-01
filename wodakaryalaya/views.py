@@ -6,3 +6,7 @@ from requests import request
 def index(request):
     
     return render(request, 'Index.html')
+
+def birth(request):
+    
+    return render(request, 'birth.html')

@@ -2,6 +2,70 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <style>
+      
+            *{
+              font-family: sans-serif;
+            }
+              form div{
+                  
+                
+                height: 100%;
+                width: 45%;
+                
+                text-align: center;
+                cursor: default;
+                padding: 2em 0;
+            }
+              input[type=text]{
+                  width: 90%;
+                  padding: 8px 8px;
+                  margin: 8px 0;
+                  font-size: 15px;
+                  border: 1px solid #ccc;
+                  border-radius: 4px;
+                 
+                }
+                input[type=string]{
+                  width: 40%;
+                  padding: 10px 10px;
+                  margin: 8px 0;
+                  font-size: 15px;
+                  border: 1px solid black;
+                  border-radius: 4px;
+                }
+      input[type=submit] {
+        width: 40%;
+        background-color: #4CAF50;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+              form{
+                  display: flex;
+                  justify-content: space-between;
+                  font-size: 20px;
+              }
+              .right{
+                  
+                  padding: 20px;
+              }
+              h2{
+                text-align: center;
+                text-decoration: underline;
+              }
+         img{
+           
+            height: 80%;
+            width: 85%;
+            margin-left: 15%;
+            
+            
+          }
+    </style>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,17 +76,22 @@
     <nav>
         
         <ul>
-            <li><a class="active" href="Index.html">Home</a></li>
+            <li><a class="active" href="{% url 'index' %}">Home</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="contact.html">Contact</a></li>
             <li><a href="notice.html">Notice</a></li>
         </ul>
     </nav>
+    {% block contant %}
+    <img src="/static/images/woda.jpg" alt="woda">
+    {% endblock %}
     <section class="background">
+       
+
         <div class="sidenav">
             
         <ul>
-            <li><a href="birth.html">Birth</a></li>
+            <li><a href="{% url 'birth' %}">Birth</a></li>
             <li><a href="marriage.html">Marriage</a></li>
             <li><a href="#">Divorce</a></li>
             <li><a href="#">Death</a></li>
@@ -30,5 +99,8 @@
         </ul>
     </div>
     </section>
+    
+   
+   
 </body>
 </html>
