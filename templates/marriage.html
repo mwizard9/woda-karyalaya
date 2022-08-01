@@ -1,0 +1,119 @@
+
+    <style>
+      *{
+        font-family: sans-serif;
+      }
+        form div{
+            
+          
+          height: 100%;
+          width: 45%;
+          
+          text-align: center;
+          cursor: default;
+          padding: 2em 0;
+      }
+        input[type=text]{
+            width: 90%;
+            padding: 8px 8px;
+            margin: 8px 0;
+            font-size: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+           
+          }
+          input[type=string]{
+            width: 40%;
+            padding: 10px 10px;
+            margin: 8px 0;
+            font-size: 15px;
+            border: 1px solid black;
+            border-radius: 4px;
+          }
+input[type=submit] {
+  width: 40%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+        form{
+            display: flex;
+            justify-content: space-between;
+            font-size: 20px;
+        }
+        .right{
+            
+            padding: 20px;
+        }
+        h2{
+          text-align: center;
+          text-decoration: underline;
+        }
+        h3{
+            text-decoration: underline;
+            font-size: 20px;
+            font-style: italic;
+        }
+    </style>
+   {% extends "Index.html" %}
+   {% block contant %}
+<body>
+    <h2>Marriage Certificate</h2>
+
+<form action="/">
+    <div class="right">
+        <h3>For Husband</h3>
+  <label for="fname">First name:</label><br>
+  <input type="text" id="fname" name="fname" placeholder="First Name"><br>
+  <label for="fname">Middle name:</label><br>
+  <input type="text" id="fname" name="fname" placeholder="Middle Name"><br>
+  <label for="lname">Last name:</label><br>
+  <input type="text" id="lname" name="lname" placeholder="Last Name"><br><br>
+  <label for="birthday">DOB</label><br>
+  <input type="date" id="birthday" name="birthday" placeholder="Date of Birth"><br>
+  <label for="fname">Father's name:</label><br>
+    <input type="text" id="fname" name="fname" placeholder="Father's Name"><br>
+    <label for="fname">Mother's name:</label><br>
+    <input type="text" id="fname" name="fname" placeholder="Mother's Name"><br>
+    <label for="fname"> Citizenship ID/No:</label><br>
+    <input type="text" id="fname" name="fname" placeholder=""><br>
+    <label for="img">Photo of Citizenship:</label>
+    <input type="file" id="img" name="img" accept="image/*"><br>
+    <label for="fname">Birth place:</label><br>
+    <input type="string" id="fname" name="fname" placeholder="Province">
+    <input type="string" id="fname" name="fname" placeholder="District">
+    <input type="string" id="fname" name="fname" placeholder="village/city"><br>
+ 
+  <input type="submit" value="Submit">
+</div>
+
+<div class="left">
+    <h3>For Wife</h3>
+    <label for="fname">First name:</label><br>
+  <input type="text" id="fname" name="fname" placeholder="First Name"><br>
+  <label for="fname">Middle name:</label><br>
+  <input type="text" id="fname" name="fname" placeholder="Middle Name"><br>
+  <label for="lname">Last name:</label><br>
+  <input type="text" id="lname" name="lname" placeholder="Last Name"><br><br>
+  <label for="birthday">DOB</label><br>
+  <input type="date" id="birthday" name="birthday" placeholder="Date of Birth"><br>
+    <label for="fname">Father's name:</label><br>
+    <input type="text" id="fname" name="fname" placeholder="Father's Name"><br>
+    <label for="fname">Mother's name:</label><br>
+    <input type="text" id="fname" name="fname" placeholder="Mother's Name"><br>
+    <label for="fname"> Citizenship ID/No:</label><br>
+    <input type="text" id="fname" name="fname" placeholder=""><br>
+    <label for="img">Photo of Citizenship:</label>
+    <input type="file" id="img" name="img" accept="image/*"><br>
+    <label for="fname">Birth place:</label><br>
+    <input type="string" id="fname" name="fname" placeholder="Province">
+    <input type="string" id="fname" name="fname" placeholder="District">
+    <input type="string" id="fname" name="fname" placeholder="village/city">
+</div>
+</form> 
+</body>
+{% endblock %}

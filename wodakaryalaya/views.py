@@ -10,3 +10,7 @@ def index(request):
 def birth(request):
     
     return render(request, 'birth.html')
+
+def marriage(request):
+    
+    return render(request, 'marriage.html')

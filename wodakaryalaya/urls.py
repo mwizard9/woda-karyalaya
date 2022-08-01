@@ -20,5 +20,6 @@ from . import views
 urlpatterns = [
     path('index', views.index, name='index'),
     path('birth', views.birth, name='birth'),
+    path('marriage', views.marriage, name='marriage'),
     
 ]
