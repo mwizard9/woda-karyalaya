@@ -1,6 +1,7 @@
 from django.http import HttpResponse
 from django.shortcuts import render
 from requests import request
+from .models import Birth
 
 # Create your views here.
 def index(request):
@@ -12,9 +13,14 @@ def birth(request):
             fname=request.POST['fname']
             mname=request.POST['mname']
             lname=request.POST['lname']
+            Birthday=request.POST['birthday']
+
+            birth = Birth.objects.create_user(firstname=fname,mname=mname ,lastname=lname)
+            birth.save();
+            print('user created')
            
-    
-        return render(request, 'birth.html')
+        else:
+            return render(request, 'birth.html')
 
 def marriage(request):
     
