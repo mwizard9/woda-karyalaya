@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'wodakaryalaya.apps.WodakaryalayaConfig',
 ]
 
 MIDDLEWARE = [
@@ -80,7 +81,7 @@ DATABASES = {
         'NAME': 'Ewoda',
         'USER': 'postgres',
         'PASSWORD': 'maxwell100',
-        'HOST': 'LOCALHOST'
+        'HOST': 'localhost'
     }
 }
 
