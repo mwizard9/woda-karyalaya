@@ -8,8 +8,13 @@ def index(request):
     return render(request, 'Index.html')
 
 def birth(request):
+        if request.method == 'POST':
+            fname=request.POST['fname']
+            mname=request.POST['mname']
+            lname=request.POST['lname']
+           
     
-    return render(request, 'birth.html')
+        return render(request, 'birth.html')
 
 def marriage(request):
     
