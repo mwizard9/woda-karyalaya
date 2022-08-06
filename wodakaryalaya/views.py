@@ -1,6 +1,6 @@
 
 from django.http import HttpResponse
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from requests import request
 from .models import Birth
 
@@ -16,9 +16,10 @@ def birth(request):
             lname=request.POST['lname']
             Birthday=request.POST['birthday']
 
-            birth = Birth(fname=fname,mname=mname ,lname=lname)
+            birth = Birth(fname=fname ,mname=mname ,lname=lname)
             birth.save();
             print('user created')
+            return redirect(index)
            
         else:
             return render(request, 'birth.html')
