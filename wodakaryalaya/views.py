@@ -1,3 +1,4 @@
+
 from django.http import HttpResponse
 from django.shortcuts import render
 from requests import request
@@ -15,7 +16,7 @@ def birth(request):
             lname=request.POST['lname']
             Birthday=request.POST['birthday']
 
-            birth = Birth.objects.create_user(firstname=fname,mname=mname ,lastname=lname)
+            birth = Birth(fname=fname,mname=mname ,lname=lname)
             birth.save();
             print('user created')
            
