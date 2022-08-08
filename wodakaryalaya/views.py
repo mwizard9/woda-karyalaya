@@ -37,7 +37,7 @@ def marriage(request):
     return render(request, 'marriage.html')
 
 def birthc(request):
-    
-    data=Birth.objects.all()
+
+    data=Birth.objects.last()
     
     return render(request, 'birth_certificate.html',{'data':data})
