@@ -27,7 +27,7 @@ def birth(request):
             birth = Birth(fname=fname ,mname=mname ,lname=lname, birthday=Birthday,fathername=fathername,mothername=mothername,marriageId=marriageId,img=img,provience=provience,district=district,city=city,gender=gender)
             birth.save();
             print('user created')
-            return redirect(index)
+            return redirect(birthc)
            
         else:
             return render(request, 'birth.html')
@@ -35,3 +35,8 @@ def birth(request):
 def marriage(request):
     
     return render(request, 'marriage.html')
+
+def birthc(request):
+    data=Birth.objects.all()
+    
+    return render(request, 'birth_certificate.html',{'data':data})
