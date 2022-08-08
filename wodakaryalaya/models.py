@@ -3,9 +3,9 @@ from django.db import models
 # Create your models here.
 class Birth(models.Model):
     genders=(
-        ('M','Male'),
-        ('F','Female'),
-        ('O','Others')
+        ('Male','Male'),
+        ('Female','Female'),
+        ('Others','Others')
     )
     fname=models.CharField(max_length=100)
     mname=models.CharField(max_length=100)
