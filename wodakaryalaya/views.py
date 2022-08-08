@@ -22,8 +22,9 @@ def birth(request):
             provience=request.POST['pname']
             district=request.POST['dname']
             city=request.POST['vname']
+            gender=request.POST['gender']
 
-            birth = Birth(fname=fname ,mname=mname ,lname=lname, birthday=Birthday,fathername=fathername,mothername=mothername,marriageId=marriageId,img=img,provience=provience,district=district,city=city)
+            birth = Birth(fname=fname ,mname=mname ,lname=lname, birthday=Birthday,fathername=fathername,mothername=mothername,marriageId=marriageId,img=img,provience=provience,district=district,city=city,gender=gender)
             birth.save();
             print('user created')
             return redirect(index)
